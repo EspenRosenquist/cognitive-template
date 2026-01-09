@@ -1,0 +1,70 @@
+name: ExecPlan
+description: Request a self-contained implementation plan for complex/high-risk work
+title: "ExecPlan: {{PLACEHOLDER_TITLE}}"
+labels: ["type:execplan"]
+body:
+  - type: textarea
+    id: assignment
+    attributes:
+      label: Assignment (problem + desired outcome)
+      description: Describe what should be achieved and why. The assistant will draft the ExecPlan file.
+      placeholder: "{{PLACEHOLDER}}"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context / constraints / invariants
+      description: Anything the plan must respect (link to constitution/invariants if relevant).
+      placeholder: |
+        Constraints:
+        - ...
+        Invariants:
+        - ...
+        Dependencies / environment:
+        - ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: triggers
+    attributes:
+      label: Why is an ExecPlan needed?
+      description: Check the triggers that apply (Decision Gate, >2–4h, security/access/privacy, deploy/ops, refactor risk, etc.).
+      placeholder: "{{PLACEHOLDER}}"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: decision_gate
+    attributes:
+      label: Does this cross a Decision Gate?
+      options:
+        - "No"
+        - "Yes (approval required before implementation)"
+    validations:
+      required: true
+
+  - type: input
+    id: plan_path
+    attributes:
+      label: Target plan file path (assistant will create)
+      description: Suggested location under plans/. You can leave the default.
+      placeholder: "plans/YYYY-MM-DD__short-title.execplan.md"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: Plan acceptance criteria (must be true before implementation)
+      options:
+        - label: The assistant will draft the ExecPlan using `.agent/PLANS.md` and keep it self-contained.
+          required: true
+        - label: The plan will include Options A/B with quantified evaluation using `METRICS.md`.
+          required: true
+        - label: The plan will define Acceptance & verification (commands or clear N/A).
+          required: true
+        - label: If stateful/operational work applies, the plan will include Rollback & recovery (or N/A).
+          required: false

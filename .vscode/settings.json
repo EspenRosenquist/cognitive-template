@@ -1,0 +1,18 @@
+{
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "editor.formatOnSave": true,
+  "editor.rulers": [
+    100
+  ],
+  "markdownlint.config": {
+    "MD013": {
+      "line_length": 120
+    }
+  },
+  "github.copilot.chat.codeGeneration.useInstructionFiles": true,
+  "chat.instructionsFilesLocations": [
+    ".github/instructions"
+  ],
+  "chat.useAgentsMdFile": true
+}

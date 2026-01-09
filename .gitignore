@@ -1,0 +1,21 @@
+
+# OS / editor
+.DS_Store
+.idea/
+*.swp
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+.venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Local env files
+.env
+.env.*

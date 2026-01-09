@@ -13,8 +13,5 @@ Do not implement changes until:
 - the ExecPlan exists and
 - the Validation & acceptance section is defined and testable.
 
-End with:
-- Alignment check
-- Assumptions
-- Next actions
-- Open decisions / risks
+Footer:
+Follow the deliverable discipline footer in `.github/copilot-instructions.md`.

@@ -6,6 +6,8 @@
 2. {{PLACEHOLDER: Goal 2}}
 3. {{PLACEHOLDER: Goal 3}}
 
+Review cadence: Weekly or biweekly (pick one and keep it consistent).
+
 ## Bootstrap Checklist (complete before heavy development)
 - [ ] Fill out `PROJECT_CONSTITUTION.md` (North Star, DoD, constraints, gates)
 - [ ] Define invariants in `INVARIANTS.md`
@@ -16,6 +18,7 @@
 - [ ] If applicable: define deployment/runbook skeleton in `RUNBOOK.md`
 
 ## Backlog (prioritized)
+Backlog items can live in GitHub issues. Keep this list short or link to the issue list.
 - P0: {{PLACEHOLDER}}
 - P1: {{PLACEHOLDER}}
-- P2: {{PLACEHOLDER}}
+- P2: Add optional automation pack (bootstrap check script + placeholder detection + CI reminder)

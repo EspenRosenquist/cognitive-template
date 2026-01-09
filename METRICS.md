@@ -3,6 +3,11 @@
 
 This file defines how we quantify trade-offs when proposing options (baseline vs efficiency-first vs scalable).
 
+## How to score fast
+- Pick a reasonable estimate range (best/expected/worst) before debating.
+- Start from baseline (Option A) and score deltas for B/C.
+- If unsure, choose the higher risk/complexity number and document why.
+
 ## Human time (estimate)
 Provide a range and the key drivers:
 - Best-case / expected / worst-case (hours or days)
@@ -35,3 +40,9 @@ Provide a range and the key drivers:
 | A (baseline) | {{}} | {{}} | {{}} | {{}} | {{}} | {{}} |
 | B (efficiency-first) | {{}} | {{}} | {{}} | {{}} | {{}} | {{}} |
 | C (scalable) | {{}} | {{}} | {{}} | {{}} | {{}} | {{}} |
+
+Example (filled)
+| Option | Human time | Complexity | Regression risk | Maintainability | Dependencies | Notes |
+|---|---|---:|---:|---:|---|---|
+| A (baseline) | 3/5/8 days | 3 | 3 | 3 | none | Keep current stack; add tests |
+| B (efficiency-first) | 2/4/6 days | 3 | 3 | 4 | add managed service | Faster ops |

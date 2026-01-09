@@ -43,6 +43,14 @@ These weights govern recommendations. Preferences are captured but **not dominan
 4. Change security posture, data classification, or access model
 5. Cross-repo or multi-module architecture changes
 
+### Decision gate quick test
+Ask “yes/no” for each:
+- Does this alter a published interface or output contract?
+- Does this add/remove a major dependency or service?
+- Does this change data access, privacy, or security posture?
+- Does this change deployment topology or runbook obligations?
+- Does this break an invariant or require an exception?
+
 ## 7) ExecPlan policy (complex work)
 For changes that cross a Decision Gate, exceed 2–4 hours, or touch security/ETL correctness/deployment automation,
 an ExecPlan must be authored under `plans/` (see `AGENTS.md` and `.agent/PLANS.md`) before implementation begins.
@@ -53,6 +61,11 @@ An RFC must be raised if the recommended change is estimated to provide any of:
 - ≥1 point improvement in complexity (see rubric in `METRICS.md`)
 - ≥1 point improvement in regression risk
 - A major reduction in dependencies or operational burden
+
+### RFC quick test
+- Would this change materially improve time, complexity, or risk?
+- Does it remove major dependencies or operational burden?
+- Would it set a precedent for future architecture decisions?
 
 ## 9) Working agreements (Cognitive Project Loop)
 - Maintain an ordered **Goal Stack** (3–7 items) in `TODO.md`.

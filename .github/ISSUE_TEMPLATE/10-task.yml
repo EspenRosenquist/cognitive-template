@@ -1,6 +1,5 @@
-
 name: Task
-description: Deliver a concrete increment aligned with the Goal Stack
+description: Deliver a concrete increment aligned with the Goal Stack
 title: "Task: {{PLACEHOLDER_TITLE}}"
 labels: ["type:task"]
 body:
@@ -8,11 +7,10 @@ body:
     id: objective
     attributes:
       label: Objective
-      description: What is the deliverable and why does it matter (tie to Goal Stack)?
+      description: What is the deliverable and why does it matter (tie to Goal Stack)?
       placeholder: "{{PLACEHOLDER}}"
     validations:
       required: true
-
   - type: textarea
     id: dod
     attributes:
@@ -21,16 +19,14 @@ body:
       placeholder: "- [ ] ..."
     validations:
       required: true
-
   - type: textarea
     id: constraints
     attributes:
       label: Constraints / invariants to respect
-      description: Reference `PROJECT_CONSTITUTION.md` and `INVARIANTS.md`.
+      description: Reference `PROJECT_OVERVIEW.md`.
       placeholder: "{{PLACEHOLDER}}"
     validations:
       required: true
-
   - type: textarea
     id: verification
     attributes:
@@ -39,7 +35,6 @@ body:
       placeholder: "{{PLACEHOLDER}}"
     validations:
       required: true
-
   - type: dropdown
     id: decision_gate
     attributes:
@@ -49,7 +44,6 @@ body:
         - "Yes (explain below)"
     validations:
       required: true
-
   - type: textarea
     id: notes
     attributes:

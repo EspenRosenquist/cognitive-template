@@ -1,24 +1,28 @@
+# TODO — Goal Stack and Backlog
 
-# TODO — Goal Stack and Backlog
+This file serves as the active memory of your project.  Keep the Goal Stack short and ordered; use the backlog for items you will tackle later.
 
-## Goal Stack (ordered, keep 3–7 items)
-1. {{PLACEHOLDER: Goal 1}}
-2. {{PLACEHOLDER: Goal 2}}
-3. {{PLACEHOLDER: Goal 3}}
+## Goal Stack (ordered; keep 3–7 items)
 
-Review cadence: Weekly or biweekly (pick one and keep it consistent).
+1. {{Goal 1}}
+2. {{Goal 2}}
+3. {{Goal 3}}
 
-## Bootstrap Checklist (complete before heavy development)
-- [ ] Fill out `PROJECT_CONSTITUTION.md` (North Star, DoD, constraints, gates)
-- [ ] Define invariants in `INVARIANTS.md`
-- [ ] Define metrics rubric in `METRICS.md`
-- [ ] Define domain context and data contracts in `CONTEXT.md`
-- [ ] Create first **Task** issue for the next deliverable
-- [ ] If applicable: define minimal test/validation harness
-- [ ] If applicable: define deployment/runbook skeleton in `RUNBOOK.md`
+Review cadence: {{Weekly / Biweekly / Monthly}}
 
-## Backlog (prioritized)
-Backlog items can live in GitHub issues. Keep this list short or link to the issue list.
-- P0: {{PLACEHOLDER}}
-- P1: {{PLACEHOLDER}}
-- P2: Add optional automation pack (bootstrap check script + placeholder detection + CI reminder)
+## Bootstrap Checklist
+
+Complete these tasks before heavy development begins:
+
+- [ ] Fill out `PROJECT_OVERVIEW.md` (North Star, DoD, constraints, weights, gates).
+- [ ] Populate the Goal Stack above.
+- [ ] Capture a brief domain summary or glossary in `CONTEXT.md` (if needed).
+- [ ] Create your first Task in a GitHub issue or start an Exec Plan in `plans/` if the work is complex.
+
+## Backlog (prioritised)
+
+Use GitHub issues or a separate project board for your backlog.  Keep this list short or replace it with a link to your issue board.
+
+- P0: {{High priority item}}
+- P1: {{Medium priority item}}
+- P2: {{Low priority item}}

@@ -1,54 +1,30 @@
+# Cognitive Project Loop — Simplified Template
 
-# Cognitive Project Loop — Repository Template (VS Code + GitHub Copilot)
+This simplified template helps you apply the **Cognitive Project Loop** with minimal overhead.
 
-This repository is a **template** for bootstrapping long-running projects using the **Cognitive Project Loop** operating mode.
+It provides a small set of documents that act as the control plane for your project and a set of instructions for interacting with an AI assistant.  The aim is to give your agent enough context to act autonomously, while still giving you full control over the hard decisions.
 
-It provides:
-- A **Project Pack** (constitution, decisions, TODO, invariants, context, risks, metrics)
-- GitHub **issue/PR templates** to keep work aligned and traceable
-- **Copilot instruction files** so Copilot Chat and code generation stay consistent within VS Code
+## What it provides
 
-## What is the Cognitive Project Loop
-- One canonical set of docs defines goals, constraints, and invariants.
-- Work starts from the Goal Stack and is tracked as Tasks or RFCs.
-- Decisions are recorded once and referenced rather than re-litigated.
-- Options are compared with a simple rubric to make trade-offs explicit.
-- Changes are kept small, verified, and aligned to the North Star.
-- Drift is caught early by gates, RFCs, and explicit approvals.
+- **Project Overview** (`PROJECT_OVERVIEW.md`) — the single source of truth for goals, definition of done, constraints, invariants, optimisation weights and decision gates.
+- **Goal Stack and Backlog** (`TODO.md`) — a living list of what you are trying to achieve and what comes next.
+- **Decision Log** (`DECISIONS.md`) — a lightweight log of important architectural or policy choices.
+- **Context** (`CONTEXT.md`) — a place to capture domain knowledge, glossary terms, data contracts and assumptions.
+- **Plan template** (`.agent/PLAN_TEMPLATE.md`) — a short, self‑contained template for any complex change that requires a plan.
+- **AI instructions** (`AI_INSTRUCTIONS.md`) — the guidelines your AI assistant should follow when working in this repository.
 
-## Start here (15–30 min)
-1. Create a new repository from this template (GitHub: **Use this template**).
-2. Open in VS Code.
-3. Confirm Copilot instruction files are enabled (see `.vscode/settings.json`).
-4. Complete the **Bootstrap Checklist** in `TODO.md` (and core sections in `PROJECT_CONSTITUTION.md`).
-5. Start work using GitHub issues (Task or RFC) and small PRs.
+## Getting started
 
-## Phase 1 (week 1)
-- Finish the domain summary, glossary, and data contracts in `CONTEXT.md` (link to source docs where possible).
-- Populate `RISK_REGISTER.md` with top risks, mitigations, and owners.
-- Define a minimal validation/test harness and initial runbook notes if the project is operational.
-- Set a Goal Stack review cadence (weekly or biweekly) and note it in `TODO.md`.
-- Create initial backlog items as GitHub issues and keep `TODO.md` focused on the Goal Stack.
+1. Create a new repository from this template.
+2. Open the repository in VS Code and ensure Copilot instruction files are enabled (the setting lives in `.vscode/settings.json` if you use VS Code).
+3. Complete the **Bootstrap Checklist** in `TODO.md` and fill in the key sections of `PROJECT_OVERVIEW.md`.
+4. Keep the Goal Stack in `TODO.md` updated, use GitHub issues for backlog items, and record decisions in `DECISIONS.md`.
+5. For any work that crosses a decision gate, is expected to take more than a few hours or touches security/deployment, create a plan under `plans/` using `.agent/PLAN_TEMPLATE.md`.
 
-## How to use this template
-- Treat `PROJECT_CONSTITUTION.md` as the **canonical source of truth** for constraints, weights, and decision gates.
-- Record **any decision that changes the architecture, interfaces, security posture, or major dependencies** in `DECISIONS.md`.
-- Keep `INVARIANTS.md` short but strict: it prevents accidental refactors.
-- Use `RISK_REGISTER.md` for known risks and mitigations.
-- Use `METRICS.md` to define the scoring rubric for time/complexity/risk/maintainability.
-- Update the Project Constitution contact link in `.github/ISSUE_TEMPLATE/config.yml` to your new repo URL when you create a project from this template.
+## Why simplify?
 
-## Copilot instructions
-Copilot custom instructions are read from `.github/copilot-instructions.md` (repository-wide) in supported IDEs. See GitHub Docs.
-In VS Code you must also enable instruction files (see `.vscode/settings.json`).
+Previous versions of the Cognitive Project Loop split responsibilities across many files (`PROJECT_CONSTITUTION.md`, `INVARIANTS.md`, `METRICS.md`, etc.).  While expressive, this could feel heavy and discourage adoption.  This simplified template consolidates the most important controls into a single **Project Overview** file and moves the rest into optional documents.  The result is easier to bootstrap and easier for an AI assistant to consume.
 
-- Core repo-wide instructions: `.github/copilot-instructions.md`
-- Additional, focused instruction files: `.github/instructions/*.instructions.md`
+## How the AI assistant fits in
 
-## Recommended workflow
-- Create a **Task** issue for each deliverable.
-- Create an **RFC** issue for changes that cross decision gates or exceed the RFC trigger thresholds.
-- Keep PRs small; include the checklist in the PR template.
-
-## What to replace
-Search for `{{PLACEHOLDER}}` across the repo and replace with project-specific information.
+Your AI assistant (e.g. GitHub Copilot Chat) reads `AI_INSTRUCTIONS.md` to understand how to work in this repo.  It then uses the information you provide in `PROJECT_OVERVIEW.md` and `TODO.md` to propose solutions, raise questions only when necessary, and maintain alignment with your goals.  See the AI instructions file for details.

@@ -1,18 +1,6 @@
 {
-  "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
-  "editor.formatOnSave": true,
-  "editor.rulers": [
-    100
-  ],
-  "markdownlint.config": {
-    "MD013": {
-      "line_length": 120
-    }
-  },
+  // Enable Copilot instruction files in VS Code.  See AI_INSTRUCTIONS.md for details.
   "github.copilot.chat.codeGeneration.useInstructionFiles": true,
-  "chat.instructionsFilesLocations": [
-    ".github/instructions"
-  ],
-  "chat.useAgentsMdFile": true
+  // Path to the repository‑wide instruction file used by Copilot.  This must be relative to the repo root.
+  "github.copilot.instructions.file": ".github/copilot-instructions.md"
 }
